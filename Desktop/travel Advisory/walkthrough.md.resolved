@@ -1,0 +1,49 @@
+# Travel Advisory Project Walkthrough
+
+I have successfully built the full-stack Travel Advisory application.
+
+## Features Implemented
+
+### Backend (FastAPI)
+- **API Endpoints**:
+    - `/countries`: List of country names.
+    - `/country/{name}`: Detailed metrics for a country.
+    - `/top-safe-countries`: Top 6 safest countries.
+    - `/search`: Search functionality.
+    - `/all-countries`: Full dataset for frontend filtering.
+- **Data Processing**: Loads CSV, cleans data, computes safety scores and risk levels.
+
+### Frontend (Vite + React)
+- **Home Page**:
+    - Search bar with auto-suggestions.
+    - "Safest Destinations" grid.
+    - "Global Safety Insights" widget.
+    - **Advanced Filtering**: Filter by safety score, LGBTQ+ safety, etc.
+- **Country Details Page**:
+    - Dynamic routing (`/country/:name`).
+    - **Header**: Safety score, risk badge, and AI-like summary.
+    - **Safety Overview**: Grid of 6 metric cards with progress bars.
+    - **Radar Chart**: Visual comparison of safety dimensions using Recharts.
+    - **Info Section**: Currency, languages, emergency numbers, and advisories.
+    - **Skeleton Loaders**: Loading state for better UX.
+- **Rankings Page**: Tables for "Safest Overall", "Best Healthcare", etc.
+- **Compare Page**: Side-by-side comparison of two countries.
+
+## How to Run
+
+1.  **Backend**:
+    ```bash
+    cd backend
+    uvicorn main:app --reload --port 8000
+    ```
+2.  **Frontend**:
+    ```bash
+    cd frontend
+    npm run dev
+    ```
+    Open `http://localhost:5173` in your browser.
+
+## Verification
+- Verified backend endpoints using `curl`.
+- Verified frontend components and routing.
+- Fixed lint errors in [Navbar.jsx](file:///c:/Users/91797/Desktop/travel%20Advisory/frontend/src/components/Navbar.jsx) and [CountryDetails.jsx](file:///c:/Users/91797/Desktop/travel%20Advisory/frontend/src/pages/CountryDetails.jsx).
